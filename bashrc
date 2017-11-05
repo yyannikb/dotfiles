@@ -126,7 +126,7 @@ alias desk='cd /home/yannik/Desktop'
 # alias opf='xdg-open "$(find $HOME -type f 2> /dev/null | grep -v "/\." | dmenu -i -l 10)" &>/dev/null'
 
 # open files from terminal
-alias opf='xdg-open "$(find -L ~/Desktop -type f 2> /dev/null | grep -v "/\." | dmenu -i -l 10)" &>/dev/null'	
+alias opf='xdg-open "$(find -L ~/Dropbox ~/Documents ~/Videos -type f 2> /dev/null | grep -v "/\." | dmenu -i -l 10)" &>/dev/null'	
 	# -L:				follow symbolic links (Desktop -> Dropbox etc.)
 	# >2 /dev/null:		discard 'Permission denied' errors
 	# grep -v '/\.':	ignore hidden
@@ -135,13 +135,13 @@ alias opf='xdg-open "$(find -L ~/Desktop -type f 2> /dev/null | grep -v "/\." | 
 	# &>/dev/null:		discard all output from xdg-open
 
 # open directories from terminal
-alias opd='nautilus "$(find -L ~/Desktop -type d 2> /dev/null | grep -v "/\." | dmenu -i -l 10)" &>/dev/null'
+alias opd='nautilus "$(find -L ~/Dropbox ~/Documents ~/Videos -type d 2> /dev/null | grep -v "/\." | dmenu -i -l 10)" &>/dev/null'
 
 # cd to directory from terminal
-alias cdd='cd $(find -L ~/Desktop -type d 2> /dev/null | grep -v "/\." | dmenu -i -l 10)' 
+alias cdd='cd $(find -L ~/Dropbox ~/Documents ~/Videos -type d 2> /dev/null | grep -v "/\." | dmenu -i -l 10)' 
 
 # use dmenu to open file in vim
-alias vimf='vim $(find -L ~/Desktop -type f 2> /dev/null | grep -v "/\." | dmenu -i -l 10)' 
+alias vimf='vim $(find -L ~/Dropbox ~/Documents ~/Videos -type f 2> /dev/null | grep -v "/\." | dmenu -i -l 10)' 
 
 # open file in current directory
 alias opid='xdg-open $(ls | grep -v "/\." | dmenu -i -l 10) &>/dev/null'
@@ -163,3 +163,6 @@ export PATH=$PATH:/home/yannik/bin
 # increase history length
 HISTFILESIZE=2500
 
+
+# added by Anaconda3 installer
+export PATH="/home/yannik/anaconda3/bin:$PATH"
