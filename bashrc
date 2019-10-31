@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -159,10 +159,6 @@ export PATH=$PATH:/usr/local/MATLAB/MATLAB_Production_Server/R2015a/bin
 
 # add /home/yannik/bin to the path
 export PATH=$PATH:/home/yannik/bin
-
-# increase history length
-HISTFILESIZE=2500
-
 
 # added by Anaconda3 installer
 export PATH="/home/yannik/anaconda3/bin:$PATH"
