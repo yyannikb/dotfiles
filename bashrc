@@ -160,5 +160,21 @@ export PATH=$PATH:/usr/local/MATLAB/MATLAB_Production_Server/R2015a/bin
 # add /home/yannik/bin to the path
 export PATH=$PATH:/home/yannik/bin
 
+export PATH=$PATH:/home/yannik/.local/bin
+
 # added by Anaconda3 installer
 export PATH="/home/yannik/anaconda3/bin:$PATH"
+
+# install z script (navigate to directories based on frequency)
+. /home/yannik/bin/z/z.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# smart git checkout
+gch(){
+    git checkout $(git branch | fzf| tr -d '[:space:]')
+}
+
+gdel(){
+    git branch -d  $(git branch | fzf -m | tr -d '[:space:]')
+}
